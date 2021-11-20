@@ -5,6 +5,10 @@ import pickle
 import time
 
 class Client(threading.Thread):
+    # can't remember why i made this so large.
+    # I think there was an issue with messages not being sent correctly
+    # or something like that and i just decided to increase the buffer
+    # size. Don't think it fixed it!
     BUFFER_SIZE = 15360
 
     def __init__(self, server, s):
